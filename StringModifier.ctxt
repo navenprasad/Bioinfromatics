@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=sTest
+comment0.target=StringModifier(StringModifierGUI)
+comment0.text=\nConstructor\ for\ objects\ of\ class\ StringEngine\n\n
+comment1.target=String\ getDisplayUppercase()
+comment1.text=\nTurn\ the\ display\ string\ to\ upper\ case\ and\ return\ the\ result.\n\n
+comment2.target=String\ getDisplayLowercase()
+comment2.text=\nTurn\ the\ display\ string\ to\ l\ case\ and\ return\ the\ result.\n\n
+comment3.target=String\ getDisplayTitlecase()
+comment3.text=\nTurn\ the\ display\ string\ to\ title\ case\ and\ return\ the\ result.\n\n
+comment4.target=String\ getDisplayStripped()
+comment4.text=\nRemove\ leading\ and\ trailing\ spaces\ from\ the\ display\ string\ and\ return\nthe\ result.\n\n
+comment5.target=int\ getDisplayLength()
+comment5.text=\nReturn\ the\ length\ of\ the\ display\ string.\n\n
+comment6.target=String\ appendInputToDisplay()
+comment6.text=\nAdd\ the\ input\ string\ at\ the\ end\ of\ the\ display\ string\ and\ return\nthe\ result.\n\n
+comment7.target=String\ prependInputToDisplay()
+comment7.text=\nAdd\ the\ input\ string\ at\ the\ beginning\ of\ the\ display\ string\ and\ return\nthe\ result.\n\n
+comment8.target=String\ insertInputToDisplay()
+comment8.text=\nAdd\ the\ input\ string\ to\ the\ middle\ of\ the\ display\ string\ and\ return\nthe\ result.\n\n
+numComments=9

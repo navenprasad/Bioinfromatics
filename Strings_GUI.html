@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>CPE9001 Exercises</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.2  (Win32)">
+	<META NAME="CREATED" CONTENT="20020322;12003822">
+	<META NAME="CHANGEDBY" CONTENT="Lee Seldon">
+	<META NAME="CHANGED" CONTENT="20080219;11044089">
+	<META NAME="subject" CONTENT="CPE 9001">
+	<STYLE TYPE="text/css">
+	<!--
+		P { color: #000000; font-family: "Arial", sans-serif; font-size: 10pt }
+		H2 { color: #990000; font-size: 12pt }
+		A:link { color: #ff0000; font-size: 10pt }
+		A:visited { color: #ff0000; font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-AU" TEXT="#000000" LINK="#ff0000" VLINK="#ff0000" BGCOLOR="#ffffff" DIR="LTR">
+<H2>4.4 The StringTest project</H2>
+<P>Get the project stringtest from the subject web site. 
+</P>
+<P>It has in it two classes: 
+</P>
+<P>StringTester: 
+</P>
+<UL>
+	<P>This is the main class that has a user interface. Create an
+	object of this class to start the application. It will show a
+	graphical user interface that offers some string operations. This
+	class is complete you do not have to change it.</P>
+</UL>
+<P>StringEngine: 
+</P>
+<UL>
+	<P>This is the class that implements the string operation
+	functionality. This class is not properly implemented. It is your
+	job to implement the operations in this class.</P>
+</UL>
+<P>The interface of the application shows a row of buttons at the
+top, a string in the middle (the &quot;display&quot;), and a text
+field and some buttons at the bottom. The display initially says
+&quot;Welcome to the String Tester&quot;. 
+</P>
+<UL>
+	<P>The buttons are intended to do the following:</P>
+</UL>
+<P><B>UPPERCASE:</B> Switches the display to upper case. 
+</P>
+<P><B>lowercase:</B> Switches the display to lower case. 
+</P>
+<P><B>Titlecase:</B> Switches the display to title case. Initially,
+just try to turn the first letter of the display to upper case, and
+the rest to lower case. As a real challenge task (after you finish
+everything else), try to start each word with an upper case letter. 
+</P>
+<P><B>Strip:</B> Remove all spaces at the beginning and the end of
+the display. 
+</P>
+<P><B>Length:</B> Display the length (number of characters) of the
+display. 
+</P>
+<P><B>Quit:</B> Quit the application. 
+</P>
+<P><B>Append:</B> Add the text from the text filed to the end of the
+display. 
+</P>
+<P><B>Prepend:</B> Add the text from the text filed to the start of
+the display string. 
+</P>
+<P><B>Insert:</B> Insert the string in the text field into the middle
+of the displayed string. 
+</P>
+<P><B>Replace:</B> Replace the display with the string in the text
+field. 
+</P>
+<P>The interface for this application is already implemented. You
+only need to implement the StringEngine class. Most of the method
+signatures are already written, 
+</P>
+<P><I>Hint:</I></P>
+<P>To implement the StringEngine methods, you need to get access to
+the display string and the string from the text field (the &quot;input
+string&quot;). You can get them from the StringTester class: The
+string tester has two methods: 
+</P>
+<UL>
+	<P>public String getDisplayString() 
+	</P>
+</UL>
+<P>and 
+</P>
+<UL>
+	<P>public String getInputString() 
+	</P>
+</UL>
+<P>that return those strings. To get access to these methods, you
+need a reference to the StringTester object in the StringEngine
+object. To achieve this, do the following: 
+</P>
+<UL>
+	<LI><P>define an instance field named &quot;userInterface&quot; in
+	the StringEngine class; 
+	</P>
+	<LI><P>add a parameter &quot;interfaceObject&quot; to the
+	constructor of StringEngine; 
+	</P>
+	<LI><P>in the constructor, assign &quot;interfaceObject&quot; to
+	&quot;userInterface&quot;; 
+	</P>
+	<LI><P>in the StringTester class, where the StringEngine object is
+	created (and the constructor called) you need to add the parameter.
+	Pass in &quot;this&quot; as the parameter that will pass the
+	StringTester object itself; 
+	</P>
+	<LI><P>in the StringEngine methods implementing the operations, you
+	can now write lines such as <BR>String display =
+	userInterface.getDisplayString();<BR>String input =
+	userInterface.getInputString();</P>
+</UL>
+<P><EM>Finally</EM>, add a <STRONG>JTextField outputText;</STRONG> to
+the StringTester GUI, just under the JLabel. Re-write the output
+method so that output is displayed in both the JLabel and the
+JTextField.</P>
+<P><I><B>Another important hint:</B></I></P>
+<P>Don't work alone! Work in pairs or small groups, walk around, look
+at other peoples ideas, discuss! 
+</P>
+<H2>5.3 GUI for StringTester</H2>
+<P>Copy the StringTester code from the previous week's directory into
+this week's. Look at StringTester.java - note that each button has a
+separate ActionListener, which is in a separate class. Re-write
+StringTester.java so that the StringTester class handles all of the
+button events itself. That is, it must become an ActionListener by
+implementing the ActionListener interface. Each time you create a
+button, add 'this' as its ActionListener. Then StringTester.java must
+have an 'actionPerformed(ActionEvent event)' method to handle all of
+the button events.<BR>If you want, finally add a JLabel with your
+favorite (small) image to the StringTester GUI.</P>
+<H2>5.4 Make a Java project</H2>
+<P>After re-writing the StringTester source code, combine
+StringTester.java and StringEngine.java into a Java project. To do
+this, put both files into a subdirectory of the current one, named,
+e.g., mySTT. In each file insert the line 'package mySTT;' at the
+very top of the file. Remember, the package declaration must be the
+first statement in the file. I find that both BlueJ and JCreator
+handle packages in ways that are difficult to understand. So, from
+the command line, in the directory ABOVE mySTT, to compile them
+type<BR>'javac mySTT/StringTester.java' .<BR>To run them type, again
+in the parent directory,<BR>'java mySTT.StringTester'<BR>(Note that
+since they were created in BlueJ, they may not have a 'main(String[]
+args)' method, in which case you will have to write one in the
+StringTester.java file.</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=StringModifierGUI()
+comment0.text=\nCreate\ a\ user\ interface\ for\ a\ given\ calcEngine.\n\n
+comment1.target=String\ getDisplayString()
+comment1.text=\nReturn\ the\ current\ text\ of\ the\ display\ string.\n\n
+comment2.target=String\ getInputString()
+comment2.text=\nReturn\ the\ current\ text\ of\ the\ input\ string.\n\n
+comment3.target=void\ makeFrame()
+comment3.text=\nMake\ the\ frame\ for\ the\ user\ interface.\n\n
+comment4.params=panel\ buttonText\ listener
+comment4.target=void\ addButton(Container,\ String,\ ActionListener)
+comment4.text=\nAdd\ a\ button\ to\ the\ button\ panel.\n\n
+comment5.params=args
+comment5.target=void\ main(String[])
+numComments=6
